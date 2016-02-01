@@ -156,7 +156,7 @@ ul#links li:hover {
 }
 
 #select > #contact > .box1 {
-    padding-top: 5%;
+    padding-top: 15%;
     flex: 1;	
     display: inline-block;
     *display: inline;
@@ -164,7 +164,7 @@ ul#links li:hover {
 }
 
 #select > #contact > .box2 {
-    padding-top: 5%;
+    padding-top: 15%;
     flex: 1;	
     display: inline-block;
     *display: inline;
@@ -172,7 +172,7 @@ ul#links li:hover {
 }
 
 #select > #contact > .box3 {
-    padding-top: 5%;
+    padding-top: 15%;
     flex: 1;	
     display: inline-block;
     *display: inline;
