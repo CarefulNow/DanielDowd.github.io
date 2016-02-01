@@ -140,21 +140,43 @@ ul#links li:hover {
 }
 
 #select > #contact {
-    height: 125px;
-    padding-left: 10%;
-    padding-top: 12%;
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-	color: maroon;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+	color: rgb(51, 51, 51);
+	font-size: 2vw;
+    padding-bottom: 10%;
 }
 
-.box1, .box2, .box3 {
-    width: 25%;
-    height: auto;
+#select > #contact > .box1 {
+    padding-top: 10%;
+    flex: 1;	
     display: inline-block;
     *display: inline;
     zoom: 1;
+}
+
+#select > #contact > .box2 {
+    padding-top: 10%;
+    flex: 1;	
+    display: inline-block;
+    *display: inline;
+    zoom: 1;	
+}
+
+#select > #contact > .box3 {
+    padding-top: 10%;
+    flex: 1;	
+    display: inline-block;
+    *display: inline;
+    zoom: 1;	
 }
 
 .stretch {
