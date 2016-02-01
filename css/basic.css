@@ -162,14 +162,14 @@ ul#links li:hover {
 }
 
 #select > #contact > .box2 {
-    flex: 2;	
+    flex: 1;	
     display: inline-block;
     *display: inline;
     zoom: 1;	
 }
 
 #select > #contact > .box3 {
-    flex: 3;	
+    flex: 1;	
     display: inline-block;
     *display: inline;
     zoom: 1;	
@@ -187,11 +187,11 @@ ul#links li:hover {
 }
 
 .email {
-	max-width: 30%;
+	max-width: 60%;
 }
 
 .linkedin {
-	max-width: 30%;
+	max-width: 60%;
 }
 
 .home {
