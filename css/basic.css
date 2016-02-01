@@ -150,7 +150,7 @@ ul#links li:hover {
 }
 
 .box1, .box2, .box3 {
-    width: 28%;
+    width: 25%;
     height: auto;
     display: inline-block;
     *display: inline;
