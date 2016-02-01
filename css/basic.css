@@ -183,18 +183,15 @@ ul#links li:hover {
 }
 
 .github {
-	max-width: 600%;
-	width: 250%;
+	max-width: 60%;
 }
 
 .email {
-	max-width: 600%;
-	width: 250%;
+	max-width: 60%;
 }
 
 .linkedin {
-	max-width: 600%;
-	width: 250%;
+	max-width: 60%;
 }
 
 .home {
