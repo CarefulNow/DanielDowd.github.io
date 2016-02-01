@@ -154,14 +154,14 @@ ul#links li:hover {
     height: auto;
     display: inline-block;
     *display: inline;
-    zoom: 1
+    zoom: 1;
 }
 
 .stretch {
     width: 100%;
     display: inline-block;
     font-size: 0;
-    line-height: 0
+    line-height: 0;
 }
 
 .github {
