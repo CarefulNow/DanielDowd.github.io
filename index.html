@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyWebsite">
+<head>
+    <title>Daniel Dowd</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="css/basic.css">
+    <meta charset="UTF-8">
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="selection">
+	<div id="header">
+		<div class="icon">
+			<img ng-src="images/ball2.png"/>
+		</div>
+		<div id="title"><span>Daniel Dowd</span>
+			<ul id="links" ng-repeat="item in items">
+    			<li ng-click="$parent.page = item">{{item}}</li>
+    		</ul>
+    	</div>
+	</div>
+	<div id="select" ng-switch on="page">
+		<div id="home" ng-switch-default>
+			<img class="home" ng-src="images/home.svg">
+		</div>
+		<div id="about" ng-switch-when="About">
+			<div class="pic">
+				<img class="balls" ng-src="images/balls.svg">
+			</div>
+			<div class="text">
+				<p>I am a final year student of the Integrated Masters in Computer Engineering at <a ng-style="{'color':'red'}" href="https://www.tcd.ie" target="_blank">Trinity College Dublin</a> set to Graduate in 2016. My Masters Thesis is on Dynamic Performance Tuning of Intels Restricted Transactional Memory.</p> 
+
+				<p>I also participated in an internship program in 4th year where I spent 7 months working for <a ng-style="{'color':'red'}" href="http://www.mastercard.com/ie/consumer/" target="_blank">MasterCard</a>.</p> 
+
+				<p>Further information can be found at my <a ng-style="{'color':'red'}" href="https://ie.linkedin.com/in/daniel-dowd-9428b2103" target="_blank">Linkedin page</a>.</p>
+			</div>
+		</div>
+		<div id="projects" ng-switch-when="Projects">
+			<div class="pic">
+				<img class="proj" ng-src="images/proj.svg">
+			</div>
+			<div class="text">
+				<span>All code can be found on my Github page in the Contact section.</span>
+				<ul ng-repeat="project in projects">
+					<li>{{project.name}}</li>
+					<span ng-style="{'font-size':'1.5vw'}">{{project.info}}</span>
+				</ul>
+			</div>
+		</div>
+		<div id="contact" ng-switch-when="Contact">
+			<div class="box1">
+				<a href="https://github.com/CarefulNow" target="_blank">
+					<img class="github" ng-src="images/git.svg">
+				</a>
+			</div>
+			<div class="box2">
+				<a href="mailto:danny25106@gmail.com" target="_blank">
+					<img class="email" ng-src="images/email.svg">
+				</a>
+			</div>
+			<div class="box3">
+				<a href="https://ie.linkedin.com/in/daniel-dowd-9428b2103" target="_blank">
+					<img class="linkedin" ng-src="images/link.svg">
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
