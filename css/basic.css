@@ -63,7 +63,7 @@ ul#links li:hover {
 }
 
 #select {
-	top: 15vh;
+
 	font-family: "Courier new", monospace, serif;
 	display: inline-block;
 	position: relative;
@@ -199,7 +199,8 @@ ul#links li:hover {
 }
 
 .home {
-	padding-left: 14%;
-	padding-top: 2%;
-	max-width: 65%;
+    position: relative;
+    top: 8vw;
+    width: 70%;
+    padding-left: 10%;
 }
