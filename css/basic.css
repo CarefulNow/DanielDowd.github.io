@@ -156,27 +156,21 @@ ul#links li:hover {
 }
 
 #select > #contact > .box1 {
-    padding-top: 10%;
     flex: 1;	
     display: inline-block;
     *display: inline;
-    zoom: 1;
 }
 
 #select > #contact > .box2 {
-    padding-top: 10%;
     flex: 1;	
     display: inline-block;
     *display: inline;
-    zoom: 1;	
 }
 
 #select > #contact > .box3 {
-    padding-top: 10%;
     flex: 1;	
     display: inline-block;
-    *display: inline;
-    zoom: 1;	
+    *display: inline;	
 }
 
 .stretch {
@@ -187,19 +181,22 @@ ul#links li:hover {
 }
 
 .github {
-	max-width: 60%;
+    padding-top: 30%;
+	width: 60%;
 }
 
 .email {
-	max-width: 60%;
+    padding-top: 30%;
+	width: 60%;
 }
 
 .linkedin {
-	max-width: 60%;
+    padding-top: 30%;
+	width: 60%;
 }
 
 .home {
     position: relative;
-    width: 70%;
-    padding-left: 10%;
+    width: 67%;
+    padding-left: 13%;
 }
