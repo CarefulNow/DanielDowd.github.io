@@ -1,67 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="MyWebsite">
-<head>
-    <title>Daniel Dowd</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <link rel="stylesheet" href="css/basic.css">
-    <meta charset="UTF-8">
-    <script src="js/controllers.js"></script>
-</head>
-<body ng-controller="selection">
-	<div id="header">
-		<div class="icon">
-			<img ng-src="images/ball2.png"/>
-		</div>
-		<div id="title"><span>Daniel Dowd</span>
-			<ul id="links" ng-repeat="item in items">
-    			<li ng-click="$parent.page = item">{{item}}</li>
-    		</ul>
-    	</div>
-	</div>
-	<div id="select" ng-switch on="page">
-		<div id="home" ng-switch-default>
-			<img class="home" ng-src="images/home.svg">
-		</div>
-		<div id="about" ng-switch-when="About">
-			<div class="pic">
-				<img class="balls" ng-src="images/balls.svg">
-			</div>
-			<div class="text">
-				<p>I am a final year student of the Integrated Masters in Computer Engineering at <a ng-style="{'color':'red'}" href="https://www.tcd.ie" target="_blank">Trinity College Dublin</a> set to Graduate in 2016. My Masters Thesis is on Dynamic Performance Tuning of Intels Restricted Transactional Memory.</p> 
+<html lang="en" ng-app="myWebsite">
+    <head>
+        <meta charset=”utf-8”> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daniel Dowd</title>
 
-				<p>I also participated in an internship program in 4th year where I spent 7 months working for <a ng-style="{'color':'red'}" href="http://www.mastercard.com/ie/consumer/" target="_blank">MasterCard</a>.</p> 
+        <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="bower_components/pure/pure.css">
+        <link rel="stylesheet" href="bower_components/pure/grids-responsive.css">
+        <link rel="stylesheet" href="bower_components/pure/base.css">
+        <link rel="stylesheet" href="basic.css">
 
-				<p>Further information can be found at my <a ng-style="{'color':'red'}" href="https://ie.linkedin.com/in/daniel-dowd-9428b2103" target="_blank">Linkedin page</a>.</p>
-			</div>
-		</div>
-		<div id="projects" ng-switch-when="Projects">
-			<div class="pic">
-				<img class="proj" ng-src="images/proj.svg">
-			</div>
-			<div class="text">
-				<span>All code can be found on my Github page in the Contact section.</span>
-				<ul ng-repeat="project in projects">
-					<li>{{project.name}}</li>
-					<span ng-style="{'font-size':'1.5vw'}">{{project.info}}</span>
-				</ul>
-			</div>
-		</div>
-		<div id="contact" ng-switch-when="Contact">
-			<div class="box1">
-				<a href="https://github.com/CarefulNow" target="_blank">
-					<img class="github" ng-src="images/git.svg">
-				</a>
-			</div>
-			<div class="box2">
-				<a href="mailto:danny25106@gmail.com" target="_blank">
-					<img class="email" ng-src="images/email.svg">
-				</a>
-			</div>
-			<div class="box3">
-				<a href="https://ie.linkedin.com/in/daniel-dowd-9428b2103" target="_blank">
-					<img class="linkedin" ng-src="images/link.svg">
-				</a>
-			</div>
-		</div>
-	</div>
-</body>
+        <script src="bower_components/angular/angular.js"></script>
+
+        <script src="js/controller.js"></script>
+    </head>
+    <body ng-controller='PanelController'>
+        <div id="layout">
+
+            <div id="menu">
+                <div class="pure-menu custom-menu-width">
+                    <span class="pure-menu-heading custom-menu-heading-font">Menu</span>
+                    <ul class="pure-menu-list nav nav-pills">
+                        <li class="pure-menu-item menu-item-divided" ng-class="{selected: isSelected(1), }">
+                            <a href="#" class="pure-menu-link" ng-click="selectTab(1)">Home</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" ng-class="{selected: isSelected(2), }">
+                            <a href="#" class="pure-menu-link" ng-click="selectTab(2)">About</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" ng-class="{selected: isSelected(3), }">
+                            <a href="#" class="pure-menu-link" ng-click="selectTab(3)">Projects</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" ng-class="{selected: isSelected(4), }">
+                            <a href="#" class="pure-menu-link" ng-click="selectTab(4)">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="header">
+                    <h1>Daniel Dowd</h1>
+                    <h2>{{currpage}}</h2>
+                </div>
+
+                
+                <div class="pure-g" ng-show='isSelected(1)'>
+                    <div class="pure-u-1">
+                        <img class="pure-img brain" src="images/brain.png">
+                    </div>
+                </div>
+
+                <div class="pure-g" ng-show='isSelected(2)'>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <img class="pure-img" src="images/chip.png">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-2-3 text">
+                        <p class="paragraph">
+                            I am a Computer Engineering Masters Student in Trinity College Dublin set to graduate in 2016. My Masters thesis is on Dynamic Performance Tuning of Intel's Restricted Transactional Memory.
+                        </p>
+                        <p class="paragraph">
+                            I have also participated in an internship program. I worked for MasterCard in Dublin, Ireland for the duration of the internship period.
+                        </p>
+                        <p class="paragraph">
+                            Further Information can be found on my LinkedIn page in the Contact section. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pure-g" ng-show='isSelected(3)'>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <img class="pure-img tree" src="images/circuit-tree.png">
+                        <img class="pure-img" src="images/edge.png">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-2-3 text">
+                        <p class="paragraph">All code can be found on my Github page in the Contact section.</p>
+                        <div>
+                            <ul ng-repeat="project in projects">
+                                <p class="paragraph heading">{{project.name}}</p>
+                                <p class="paragraph">{{project.info}}<br><br></p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pure-g" ng-show='isSelected(4)'>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <a href="https://github.com/CarefulNow" target="_blank">
+                            <img class="pure-img" src="images/git.png">
+                        </a>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <a href="mailto:danny25106@gmail.com" target="_blank">
+                            <img class="pure-img" src="images/email.png">
+                        </a>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <a href="https://ie.linkedin.com/in/daniel-dowd-9428b2103" target="_blank">
+                            <img class="pure-img" src="images/link.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
