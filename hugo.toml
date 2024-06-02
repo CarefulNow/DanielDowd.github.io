@@ -1,0 +1,49 @@
+baseURL = 'https://dodgitech.com/'
+languageCode = 'en-us'
+title = 'Daniel Dowd'
+theme = ["github.com/rhazdon/hugo-theme-hello-friend-ng"]
+sectionPagesMenu = 'main'
+
+[params]
+    dateform        = "Jan 2, 2006"
+    dateformShort   = "Jan 2"
+    dateformNum     = "2006-01-02"
+    dateformNumTime = "2006-01-02 15:04"
+
+    enableSharingButtons = true
+    enableRobotsTXT = true
+    enableEmoji = true
+    justifyContent = true
+
+    backgroundImage = "/banner.jpg"
+
+    keywords = "homepage, blog"
+
+    [[params.author]]
+        name = "Daniel Dowd"
+
+    [params.footer]
+        trademark = '2024'
+        copyright = true
+        author = true
+        rss = false
+
+        topText = []
+        bottomText = []
+
+    [params.logo]
+        logoMark     = ">"
+        logoText     = "$ cd $HOME"
+        logoHomeLink = "/"
+
+    [[params.social]]
+        name = "github"
+        url = "https://github.com/CarefulNow"
+    [[params.social]]
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/daniel-dowd-9428b2103/"
+    [[params.social]]
+        name = "email"
+        url = "mailto:daniel@dodgitech.com"
+
+
