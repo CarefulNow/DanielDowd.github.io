@@ -4,6 +4,8 @@ title = 'Daniel Dowd'
 theme = ["github.com/rhazdon/hugo-theme-hello-friend-ng"]
 sectionPagesMenu = 'main'
 
+canonifyURLs = true
+
 [params]
     dateform        = "Jan 2, 2006"
     dateformShort   = "Jan 2"
