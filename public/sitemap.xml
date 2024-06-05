@@ -2,18 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/DanielDowd.github.io/about/</loc>
+    <loc>https://carefulnow.github.io/DanielDowd.github.io/</loc>
     <lastmod>2024-05-22T22:29:10+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/DanielDowd.github.io/</loc>
-    <lastmod>2024-05-22T22:29:10+02:00</lastmod>
+    <loc>https://carefulnow.github.io/DanielDowd.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/DanielDowd.github.io/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/DanielDowd.github.io/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/DanielDowd.github.io/about/paypal/</loc>
-  </url><url>
-    <loc>http://localhost:1313/DanielDowd.github.io/about/global-payments/</loc>
+    <loc>https://carefulnow.github.io/DanielDowd.github.io/tags/</loc>
   </url>
 </urlset>
